@@ -1,14 +1,12 @@
 {
-  "author": "Florian Maas",
-  "email": "fpgmaas@gmail.com",
-  "author_github_handle": "fpgmaas",
+  "author": "Neal G. Ravindra",
+  "email": "ngravindra@gmail.com",
+  "author_github_handle": "nealgravindra",
   "project_name": "example-project",
   "project_slug": "{{cookiecutter.project_name|lower|replace('-', '_')}}",
-  "project_description": "This is a template repository for Python projects that use uv for their dependency management.",
-  "layout": [
-    "flat",
-    "src"
-  ],
+  "package_name": "{{ cookiecutter.project_slug }}",
+  "project_description": "This is a template repository for ML projects that use uv for their dependency management.",
+  "layout": ["src"],
   "include_github_actions": [
     "y",
     "n"
