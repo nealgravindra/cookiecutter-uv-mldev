@@ -61,6 +61,17 @@ gh repo create <org-or-user>/<repo> --private --source=. --remote=origin --push
 gh repo edit <org-or-user>/<repo> --default-branch main
 ```
 
+## Make shortcuts
+
+```bash
+make install # create the uv env and install pre-commit hooks
+make check # ruff + mypy + deptry (and uv lock --locked)
+make test # pytest with coverage
+make docs-test # make sure docs can build
+make docs # serve docs locally
+make build / make publish # build/publish distributions (if enabled)
+```
+
 ## Every day commands
 
 ```bash

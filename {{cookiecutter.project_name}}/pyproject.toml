@@ -19,12 +19,12 @@ classifiers = [
 ]
 dependencies = [
     "torch",
+    "numpy",
     "hydra-core",
     "wandb",
     "loguru",
     "click",
     "python-dotenv",
-
 ]
 
 [project.urls]

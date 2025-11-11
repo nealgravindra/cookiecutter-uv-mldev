@@ -1,0 +1,20 @@
+{
+  "python.defaultInterpreterPath": ".venv/bin/python",
+  "python.testing.pytestEnabled": true,
+  "python.testing.unittestEnabled": false,
+  "editor.formatOnSave": true,
+  // Ruff (formatter + linter)
+  "python.formatting.provider": "none",
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit"
+  },
+  "ruff.enable": true,
+  "ruff.lint.enable": true,
+  "ruff.format.enable": true,
+  // Type checking (Pylance)
+  "python.analysis.typeCheckingMode": "standard",
+  "recommendations": [
+    "ms-python.python",
+    "charliermarsh.ruff", // Ruff extension
+  ]
+}
