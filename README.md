@@ -98,7 +98,7 @@ uv run mkdocs serve
 
 ## Acknowledgements
 
-This project is based on [Florian Maas\'s](https://github.com/fpgmaas) [cookiecutter-uv package](https://github.com/fpgmaas/cookiecutter-uv), which is in turn partially based on [Audrey
-Feldroy\'s](https://github.com/audreyfeldroy)\'s great
+This project is based on [Florian Maas\'s](https://github.com/fpgmaas) [cookiecutter-uv package](https://github.com/fpgmaas/cookiecutter-uv), which is in turn based on [Audrey
+Feldroy\'s](https://github.com/audreyfeldroy)\'s
 [cookiecutter-pypackage](https://github.com/audreyfeldroy/cookiecutter-pypackage)
 repository.

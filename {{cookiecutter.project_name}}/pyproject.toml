@@ -57,14 +57,13 @@ build-backend = "hatchling.build"
 {% if cookiecutter.layout == "src" -%}
 [tool.hatch.build.targets.wheel]
 packages = ["src/{{cookiecutter.project_slug}}"]
+include = ["src/{{cookiecutter.project_slug}}/configs/**"]
 {%- else -%}
 [tool.hatch.build.targets.wheel]
 packages = ["{{cookiecutter.project_slug}}"]
+include = ["{{cookiecutter.project_slug}}/configs/**"]
 {%- endif %}
 
-# include configs
-[tool.hatch.build.targets.wheel]
-include = ["src/{{cookiecutter.project_slug}}/configs/**"]
 
 {% if cookiecutter.type_checker == "mypy" -%}
 [tool.mypy]
