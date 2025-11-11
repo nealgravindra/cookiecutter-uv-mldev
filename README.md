@@ -49,9 +49,46 @@ cookiecutter https://github.com/fpgmaas/cookiecutter-uv.git
 
 Follow the prompts to configure your project. Once completed, a new directory containing your project will be created. Then navigate into your newly created project directory and follow the instructions in the `README.md` to complete the setup of your project.
 
+
+
+## Every day commands
+
+```bash
+# one-time setup
+uv sync
+uv lock --check # verify pyproject vs lock consistency
+
+# run training (Hydra config)
+uv run python -m <pkg>.train --config configs/MY_CONFIG.yaml
+
+# quick smoke tests
+uv run pytest -q
+uv run pytest -q -m gpu # skips if no GPU
+
+# style checks
+uv run ruff check .
+uv run mypy
+
+# add / remove deps
+uv add polars
+uv add --dev pytest-benchmark # dev-only dep
+uv remove pandas
+
+# strict CI-style execution
+uv sync --locked
+uv run --locked pytest -q
+
+# build & (optionally) publish a package
+uvx --from build pyproject-build --installer uv
+uvx twine upload dist/* # add PYPI token
+
+# docs
+uv run mkdocs serve
+```
+
 ## Acknowledgements
 
-This project is partially based on [Audrey
+This project is based on [Florian Maas\'s](https://github.com/fpgmaas) [cookiecutter-uv package](https://github.com/fpgmaas/cookiecutter-uv), which is in turn partially based on [Audrey
 Feldroy\'s](https://github.com/audreyfeldroy)\'s great
 [cookiecutter-pypackage](https://github.com/audreyfeldroy/cookiecutter-pypackage)
 repository.

@@ -17,6 +17,15 @@ classifiers = [
     "Programming Language :: Python :: 3.13",
     "Topic :: Software Development :: Libraries :: Python Modules",
 ]
+dependencies = [
+    "torch",
+    "hydra-core",
+    "wandb",
+    "loguru",
+    "click",
+    "python-dotenv",
+
+]
 
 [project.urls]
 Homepage = "https://{{cookiecutter.author_github_handle}}.github.io/{{cookiecutter.project_name}}/"
@@ -52,6 +61,10 @@ packages = ["src/{{cookiecutter.project_slug}}"]
 [tool.hatch.build.targets.wheel]
 packages = ["{{cookiecutter.project_slug}}"]
 {%- endif %}
+
+# include configs
+[tool.hatch.build.targets.wheel]
+include = ["src/{{cookiecutter.project_slug}}/configs/**"]
 
 {% if cookiecutter.type_checker == "mypy" -%}
 [tool.mypy]
