@@ -37,19 +37,29 @@ On your local machine, navigate to the directory in which you want to
 create a project directory, and run the following command:
 
 ```bash
-uvx cookiecutter https://github.com/fpgmaas/cookiecutter-uv.git
+uvx cookiecutter https://github.com/nealgravindra/cookiecutter-uv-mldev.git
 ```
 
 or if you don't have `uv` installed yet:
 
 ```bash
 pip install cookiecutter
-cookiecutter https://github.com/fpgmaas/cookiecutter-uv.git
+cookiecutter https://github.com/nealgravindra/cookiecutter-uv-mldev.git
 ```
 
 Follow the prompts to configure your project. Once completed, a new directory containing your project will be created. Then navigate into your newly created project directory and follow the instructions in the `README.md` to complete the setup of your project.
 
+### Private repo
 
+Requires `gitlab` or `GitHub` cli:
+
+```bash
+git init -b main
+git add .
+git commit -m "init repo"
+gh repo create <org-or-user>/<repo> --private --source=. --remote=origin --push
+gh repo edit <org-or-user>/<repo> --default-branch main
+```
 
 ## Every day commands
 
