@@ -22,6 +22,8 @@ repos:
       - id: ruff-check
         args: [--exit-non-zero-on-fix, --config=pyproject.toml]
         exclude: ^{{cookiecutter.project_name}}
+        types: [python]
       - id: ruff-format
         args: [--config=pyproject.toml]
         exclude: ^{{cookiecutter.project_name}}
+        types: [python]
