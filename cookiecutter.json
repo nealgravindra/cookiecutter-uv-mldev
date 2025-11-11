@@ -6,7 +6,7 @@
   "project_slug": "{{cookiecutter.project_name|lower|replace('-', '_')}}",
   "package_name": "{{ cookiecutter.project_slug }}",
   "project_description": "This is a template repository for ML projects that use uv for their dependency management.",
-  "layout": ["src"],
+  "layout": ["src", "flat"],
   "include_github_actions": [
     "y",
     "n"

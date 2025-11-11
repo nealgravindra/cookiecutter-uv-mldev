@@ -60,8 +60,11 @@ packages = ["src/{{cookiecutter.project_slug}}"]
 {%- else -%}
 [tool.hatch.build.targets.wheel]
 packages = ["{{cookiecutter.project_slug}}"]
-include = ["src/{{cookiecutter.project_slug}}/configs/**"]
 {%- endif %}
+
+# include configs
+[tool.hatch.build.targets.wheel]
+include = ["src/{{cookiecutter.project_slug}}/configs/**"]
 
 {% if cookiecutter.type_checker == "mypy" -%}
 [tool.mypy]
